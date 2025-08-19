@@ -3,7 +3,7 @@
     <div class="sidebar-header">
       <div class="brand">
         <span class="brand-icon">👩‍💼</span>
-        <span class="brand-title" v-show="!isCollapsed">E-Learning Operator</span>
+        <span class="brand-title" v-show="!isCollapsed">Operator</span>
       </div>
       <button 
         class="collapse-btn" 
