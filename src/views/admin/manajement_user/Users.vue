@@ -1,4 +1,5 @@
 <template>
+
   <div class="dashboard-layout">
     <SidebarAdmin @sidebar-change="handleSidebarChange" />
 
@@ -54,7 +55,11 @@
             <tbody>
               <tr v-for="user in filteredUsers" :key="user.id">
                 <td>
-                  <div class="user-avatar">{{ user.avatar }}</div>
+                  <div class="user-avatar">
+                    <!-- Gunakan v-if/v-else agar tidak error di CSS parser -->
+                    <span v-if="user.avatar">{{ user.avatar }}</span>
+                    <span v-else>👤</span>
+                  </div>
                 </td>
                 <td>
                   <div class="user-info">
@@ -338,6 +343,7 @@ export default {
         'siswa': '👨‍🎓',
         'operator': '👩‍💼'
       };
+      // Default avatar is '👤'
       return avatars[role] || '👤';
     }
   }
