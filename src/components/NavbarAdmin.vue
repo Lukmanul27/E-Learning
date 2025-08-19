@@ -1,3 +1,4 @@
+
 <template>
   <aside class="sidebar sidebar-admin" :class="{ 'sidebar-collapsed': isCollapsed }">
     <div class="sidebar-header">
@@ -45,12 +46,6 @@
                 <router-link to="/admin/users" class="submenu-link" @click="handleNavClick">
                   <span class="submenu-icon">👤</span>
                   <span>Lihat Semua User</span>
-                </router-link>
-              </li>
-              <li>
-                <router-link to="/admin/tambah-user" class="submenu-link" @click="handleNavClick">
-                  <span class="submenu-icon">➕</span>
-                  <span>Tambah User</span>
                 </router-link>
               </li>
               <li>

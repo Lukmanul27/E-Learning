@@ -38,13 +38,6 @@ const routes = [
     component: () => import('./views/admin/manajement_user/Users.vue'),
     meta: { requiresAuth: true, role: 'admin' }
   },
-  // TambahUser route
-  {
-    path: '/admin/tambah-user',
-    name: 'TambahUser',
-    component: () => import('./views/admin/manajement_user/TambahUser.vue'),
-    meta: { requiresAuth: true, role: 'admin' }
-  },
   {
     path: '/admin/users/:id',
     name: 'AdminUserDetail',
